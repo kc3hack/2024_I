@@ -145,6 +145,7 @@ android {
         aidl true
         prefabPublishing true
         buildConfig true
+        mlModelBinding true
     }
     prefab {
         opencv_jni_shared {
@@ -197,4 +198,7 @@ publishing {
 }
 
 dependencies {
+implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.3.0'
 }

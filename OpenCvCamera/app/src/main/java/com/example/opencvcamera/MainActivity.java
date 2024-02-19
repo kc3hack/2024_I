@@ -1,76 +1,72 @@
 package com.example.opencvcamera;
 
-import android.graphics.Point;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import org.opencv.android.CameraActivity;
-import org.opencv.android.OpenCVLoader;
-import org.opencv.core.Core;
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
 import org.opencv.android.CameraBridgeViewBase;
-import org.opencv.android.CameraBridgeViewBase.CvCameraViewListener2;
-import org.opencv.core.MatOfRect;
+import org.opencv.android.OpenCVLoader;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfByte;
+import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
-import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
+import org.opencv.objdetect.FaceDetectorYN;
 
-import android.util.Log;
-import android.view.SurfaceView;
-import android.view.WindowManager;
-import android.widget.Toast;
-
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Collections;
 import java.util.List;
 
-public class MainActivity extends CameraActivity implements CvCameraViewListener2 {
-    private static final String TAG = "OCVSample::Activity";
-    private CameraBridgeViewBase openCvCameraView;
-    private Mat mat;
-    Mat im;
-    CascadeClassifier faceDetector;
-    MatOfRect faceDetections;
+public class MainActivity extends CameraActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
+    private final Scalar BOX_COLOR = new Scalar(0, 255, 0);
+    private final Scalar RIGHT_EYE_COLOR = new Scalar(255, 0, 0);
+    private final Scalar LEFT_EYE_COLOR = new Scalar(0, 0, 255);
+    private final Scalar NOSE_TIP_COLOR = new Scalar(0, 255, 0);
+    private final Scalar MOUTH_RIGHT_COLOR = new Scalar(255, 0, 255);
+    private final Scalar MOUTH_LEFT_COLOR = new Scalar(0, 255, 255);
 
-    /**
-     * Called when the activity is first created.
-     */
+    private Mat rgbaMat;
+    private Mat bgrMat;
+    private Mat transposeRbga;
+    private Mat transposeBgr;
+    private Mat bgrScaledMat;
+    private Size inputSize = null;
+    private final float SCALE = 2.f;
+    private FaceDetectorYN faceDetectorYN;
+    private Mat facesMat;
+    private CameraBridgeViewBase openCvCameraView;
+    private CascadeClassifier cascadeClassifier;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        if (OpenCVLoader.initLocal()) {
-            Log.i(TAG, "OpenCV loaded successfully");
-        } else {
-            Log.e(TAG, "OpenCV initialization failed!");
-            (Toast.makeText(this, "OpenCV initialization failed!", Toast.LENGTH_LONG)).show();
+        if (!OpenCVLoader.initLocal()) return;
+        byte[] buffer;
+        try {
+            InputStream inputStream = getResources().openRawResource(R.raw.face_detection_yunet_2023mar);
+            int size = inputStream.available();
+            buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
+        } catch (IOException e) {
             return;
         }
+        MatOfByte modelBuffer = new MatOfByte(buffer);
+        MatOfByte configBuffer = new MatOfByte();
 
-        //! [keep_screen]
+        faceDetectorYN = FaceDetectorYN.create("onnx", modelBuffer, configBuffer, new Size(300, 300));
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        setContentView(R.layout.activity_main);
         openCvCameraView = (CameraBridgeViewBase) findViewById(R.id.camera_view);
-
-        openCvCameraView.setVisibility(SurfaceView.VISIBLE);
-
+        openCvCameraView.setVisibility(CameraBridgeViewBase.VISIBLE);
         openCvCameraView.setCvCameraViewListener(this);
-
-//        faceDetector = new CascadeClassifier("haarcascade_frontalface_alt_tree.xml");
-//        faceDetections = new MatOfRect();
-//        im = Imgcodecs.imread("input.png");
-//        int faceNum=0;
-//        // カスケード分類器で顔探索
-////        CascadeClassifier faceDetector = new CascadeClassifier("haarcascade_frontalface_alt_tree.xml");
-//        MatOfRect faceDetections = new MatOfRect();
-//        faceDetector.detectMultiScale(im, faceDetections);
-//        System.out.println("a");
-//        for (Rect rect : faceDetections.toArray()) {
-//            faceNum++;
-//            System.out.println("faceNum: " + faceNum);
-//        }
     }
 
     @Override
@@ -83,8 +79,7 @@ public class MainActivity extends CameraActivity implements CvCameraViewListener
     @Override
     public void onResume() {
         super.onResume();
-        if (openCvCameraView != null)
-            openCvCameraView.enableView();
+        if (openCvCameraView != null) openCvCameraView.enableView();
     }
 
     @Override
@@ -92,30 +87,53 @@ public class MainActivity extends CameraActivity implements CvCameraViewListener
         return Collections.singletonList(openCvCameraView);
     }
 
-    @Override
     public void onDestroy() {
         super.onDestroy();
-        if (openCvCameraView != null)
-            openCvCameraView.disableView();
+        openCvCameraView.disableView();
     }
 
     public void onCameraViewStarted(int width, int height) {
-        mat = new Mat(height, width, CvType.CV_8UC4);
+        rgbaMat = new Mat();
+        bgrMat = new Mat();
+        bgrScaledMat = new Mat();
+        facesMat = new Mat();
     }
 
     public void onCameraViewStopped() {
-        mat.release();
+        rgbaMat.release();
+        bgrMat.release();
+        bgrScaledMat.release();
+        facesMat.release();
+    }
+
+    public void visualize(Mat rgba, Mat faces) {
+        int thickness = 2;
+        float[] faceData = new float[faces.cols() * faces.channels()];
+        for (int i = 0; i < faces.rows(); i++) {
+            faces.get(i, 0, faceData);
+            // Draw bounding box
+            Imgproc.rectangle(rgba, new Rect(Math.round(SCALE * faceData[0]), Math.round(SCALE * faceData[1]), Math.round(SCALE * faceData[2]), Math.round(SCALE * faceData[3])), BOX_COLOR, thickness);
+            // Draw landmarks
+            Imgproc.circle(rgba, new Point(Math.round(SCALE * faceData[4]), Math.round(SCALE * faceData[5])), 2, RIGHT_EYE_COLOR, thickness);
+            Imgproc.circle(rgba, new Point(Math.round(SCALE * faceData[6]), Math.round(SCALE * faceData[7])), 2, LEFT_EYE_COLOR, thickness);
+            Imgproc.circle(rgba, new Point(Math.round(SCALE * faceData[8]), Math.round(SCALE * faceData[9])), 2, NOSE_TIP_COLOR, thickness);
+            Imgproc.circle(rgba, new Point(Math.round(SCALE * faceData[10]), Math.round(SCALE * faceData[11])), 2, MOUTH_RIGHT_COLOR, thickness);
+            Imgproc.circle(rgba, new Point(Math.round(SCALE * faceData[12]), Math.round(SCALE * faceData[13])), 2, MOUTH_LEFT_COLOR, thickness);
+        }
     }
 
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        mat = inputFrame.rgba();    //color
-        //mat= inputFrame.gray();    //grayscale
-        //Core.bitwise_not(inputFrame.rgba(), mat); //reversed
-        //Core.bitwise_not(inputFrame.gray(), mat); //grayscale reversed
-        //Imgproc.Canny(inputFrame.gray(), mat, 100, 200); //grayscale canny filtering
-        //Imgproc.threshold(inputFrame.gray(), mat, 0.0, 255.0, Imgproc.THRESH_OTSU); //grayscale binarization with Ohtsu
+        rgbaMat = inputFrame.rgba();
+        if (inputSize == null) {
+            inputSize = new Size(Math.round(rgbaMat.cols() / SCALE), Math.round(rgbaMat.rows() / SCALE));
+            faceDetectorYN.setInputSize(inputSize);
+        }
+        Imgproc.cvtColor(rgbaMat, bgrMat, Imgproc.COLOR_RGBA2BGR);
+        Imgproc.resize(bgrMat, bgrScaledMat, inputSize);
+        faceDetectorYN.detect(bgrScaledMat, facesMat);
+        visualize(rgbaMat, facesMat);
 
-
-        return mat;
+        return rgbaMat;
     }
 }
+
