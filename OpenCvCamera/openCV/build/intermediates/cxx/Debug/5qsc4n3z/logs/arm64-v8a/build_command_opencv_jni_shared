@@ -1,4 +1,0 @@
-/Users/fuma/Library/Android/sdk/cmake/3.22.1/bin/ninja \
-  -C \
-  /Users/fuma/AndroidStudioProjects/OpenCvCamera/opencv/.cxx/Debug/5qsc4n3z/arm64-v8a \
-  opencv_jni_shared
