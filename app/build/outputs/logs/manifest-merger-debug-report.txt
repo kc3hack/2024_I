@@ -1,0 +1,212 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:2:1-39:12
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\5ee4889bf7e0be91c8cacae99108df44\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\ab352e12d88547f9e989ffe76397c1e6\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\cd005fc8e147aeaa07d9c0dd6df5d803\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [org.tensorflow:tensorflow-lite-support:0.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\369e0952e3c2d14b76032a081eb99373\transformed\tensorflow-lite-support-0.1.0\AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\5be61898d681fbbe9c48e9edbf302120\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\ryoga\.gradle\caches\transforms-3\e3d13cf8956e2aaf28c5fea8a0de7c9a\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\ryoga\.gradle\caches\transforms-3\fe3aeb17033318bd3367c429a82f07b9\transformed\activity-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\a54b72740d022d38d811fbf15b9344a7\transformed\appcompat-resources-1.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\852065766c8eabc9a7d3a725692d03b8\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\4be14432070e8fc5e5f186851413f497\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\957401fffd730c2184d91c83a9483487\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\ryoga\.gradle\caches\transforms-3\458a149f582177045f456521918006b7\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\32770eb7da1add6be98841fcdec1133c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\271462de092af983787ad1c013a0f9e5\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\7b72574a0bac2ac031923df1f0a1d564\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\c112787d8b2aab020261a895112d1719\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\8ce056990d04ed7192991c2876e392de\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\306945d493dfd076bd833af5c5b68bec\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\963ebb5430b7c22051f2d6d59dc687d3\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.5.0] C:\Users\ryoga\.gradle\caches\transforms-3\ea8f24bee6d17f03e5d65e816f8cc591\transformed\core-1.5.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\6d766369efe0b5d7f58e98e514926fe7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\6f76ff9dc4484675062eb6595a57e18c\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\51ea3fff027b0f9cf0792eefef736f1d\transformed\savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\c618f058e6ab7da4eaf9113ec527a435\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\c35bbc283cb3eaa34e27a61efc024f00\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\db11dee54798a94e7ec7ccf3e60de7c9\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\1f677159f0bcbf6f8fbb3fdb01335db1\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\beb21d4cb9d76b1b1cc48d7506eb04bd\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\5d75e0d27614a792b6bdc94cc53545fe\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\697acdd64f808b2446bb01cbada78396\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\36278f98581e74dc19c0c6a96cfa2a94\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\e61e44f4a4f2071d2b38251654f45057\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\da7821f3cfad43deb2023bb91eecbf1a\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\4513520f6de76869bb8e9cdf6102f360\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\619f4b741a6af9b5e17612e246bbfde5\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\f642c6d44a3f30b90c8dbe4f89371ac7\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\943ae2ceadf2bc96f30c94de4d293216\transformed\tensorflow-lite-2.4.0\AndroidManifest.xml:2:1-12:12
+	package
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.camera
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:5:5-7:36
+	android:required
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:7:9-33
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:6:9-47
+uses-permission#android.permission.CAMERA
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:9:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:10:22-78
+application
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:12:5-37:19
+INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:12:5-37:19
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\5ee4889bf7e0be91c8cacae99108df44\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\5ee4889bf7e0be91c8cacae99108df44\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\ab352e12d88547f9e989ffe76397c1e6\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\ab352e12d88547f9e989ffe76397c1e6\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.5.0] C:\Users\ryoga\.gradle\caches\transforms-3\ea8f24bee6d17f03e5d65e816f8cc591\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] C:\Users\ryoga\.gradle\caches\transforms-3\ea8f24bee6d17f03e5d65e816f8cc591\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\1f677159f0bcbf6f8fbb3fdb01335db1\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\1f677159f0bcbf6f8fbb3fdb01335db1\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\943ae2ceadf2bc96f30c94de4d293216\transformed\tensorflow-lite-2.4.0\AndroidManifest.xml:10:5-20
+MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\943ae2ceadf2bc96f30c94de4d293216\transformed\tensorflow-lite-2.4.0\AndroidManifest.xml:10:5-20
+	android:extractNativeLibs
+		INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.5.0] C:\Users\ryoga\.gradle\caches\transforms-3\ea8f24bee6d17f03e5d65e816f8cc591\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:15:9-41
+	android:roundIcon
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:16:9-54
+	android:icon
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:18:9-46
+activity#com.example.takoyaki.ranking
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:20:13-36
+activity#com.example.takoyaki.preview
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:23:13-36
+activity#com.example.takoyaki.help_view
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:26:13-38
+activity#com.example.takoyaki.MainActivity
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:28:9-36:20
+	android:exported
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:29:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:31:13-35:29
+action#android.intent.action.MAIN
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:32:17-69
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:32:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:34:17-77
+	android:name
+		ADDED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:34:27-74
+uses-sdk
+INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml
+INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\5ee4889bf7e0be91c8cacae99108df44\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\5ee4889bf7e0be91c8cacae99108df44\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\ab352e12d88547f9e989ffe76397c1e6\transformed\constraintlayout-2.1.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\ab352e12d88547f9e989ffe76397c1e6\transformed\constraintlayout-2.1.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\cd005fc8e147aeaa07d9c0dd6df5d803\transformed\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\cd005fc8e147aeaa07d9c0dd6df5d803\transformed\appcompat-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [org.tensorflow:tensorflow-lite-support:0.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\369e0952e3c2d14b76032a081eb99373\transformed\tensorflow-lite-support-0.1.0\AndroidManifest.xml:4:3-71
+MERGED from [org.tensorflow:tensorflow-lite-support:0.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\369e0952e3c2d14b76032a081eb99373\transformed\tensorflow-lite-support-0.1.0\AndroidManifest.xml:4:3-71
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\5be61898d681fbbe9c48e9edbf302120\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\5be61898d681fbbe9c48e9edbf302120\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\ryoga\.gradle\caches\transforms-3\e3d13cf8956e2aaf28c5fea8a0de7c9a\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\ryoga\.gradle\caches\transforms-3\e3d13cf8956e2aaf28c5fea8a0de7c9a\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\ryoga\.gradle\caches\transforms-3\fe3aeb17033318bd3367c429a82f07b9\transformed\activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] C:\Users\ryoga\.gradle\caches\transforms-3\fe3aeb17033318bd3367c429a82f07b9\transformed\activity-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\a54b72740d022d38d811fbf15b9344a7\transformed\appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\a54b72740d022d38d811fbf15b9344a7\transformed\appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\852065766c8eabc9a7d3a725692d03b8\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\852065766c8eabc9a7d3a725692d03b8\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\4be14432070e8fc5e5f186851413f497\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\4be14432070e8fc5e5f186851413f497\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\957401fffd730c2184d91c83a9483487\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\957401fffd730c2184d91c83a9483487\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\ryoga\.gradle\caches\transforms-3\458a149f582177045f456521918006b7\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\ryoga\.gradle\caches\transforms-3\458a149f582177045f456521918006b7\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\32770eb7da1add6be98841fcdec1133c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\32770eb7da1add6be98841fcdec1133c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\271462de092af983787ad1c013a0f9e5\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\271462de092af983787ad1c013a0f9e5\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\7b72574a0bac2ac031923df1f0a1d564\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\7b72574a0bac2ac031923df1f0a1d564\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\c112787d8b2aab020261a895112d1719\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\c112787d8b2aab020261a895112d1719\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\8ce056990d04ed7192991c2876e392de\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\8ce056990d04ed7192991c2876e392de\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\306945d493dfd076bd833af5c5b68bec\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\306945d493dfd076bd833af5c5b68bec\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\963ebb5430b7c22051f2d6d59dc687d3\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\963ebb5430b7c22051f2d6d59dc687d3\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.5.0] C:\Users\ryoga\.gradle\caches\transforms-3\ea8f24bee6d17f03e5d65e816f8cc591\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\ryoga\.gradle\caches\transforms-3\ea8f24bee6d17f03e5d65e816f8cc591\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\6d766369efe0b5d7f58e98e514926fe7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\6d766369efe0b5d7f58e98e514926fe7\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\6f76ff9dc4484675062eb6595a57e18c\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\6f76ff9dc4484675062eb6595a57e18c\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\51ea3fff027b0f9cf0792eefef736f1d\transformed\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\51ea3fff027b0f9cf0792eefef736f1d\transformed\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\c618f058e6ab7da4eaf9113ec527a435\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\c618f058e6ab7da4eaf9113ec527a435\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\c35bbc283cb3eaa34e27a61efc024f00\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\c35bbc283cb3eaa34e27a61efc024f00\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\db11dee54798a94e7ec7ccf3e60de7c9\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\db11dee54798a94e7ec7ccf3e60de7c9\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\1f677159f0bcbf6f8fbb3fdb01335db1\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ryoga\.gradle\caches\transforms-3\1f677159f0bcbf6f8fbb3fdb01335db1\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\beb21d4cb9d76b1b1cc48d7506eb04bd\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\beb21d4cb9d76b1b1cc48d7506eb04bd\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\5d75e0d27614a792b6bdc94cc53545fe\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\5d75e0d27614a792b6bdc94cc53545fe\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\697acdd64f808b2446bb01cbada78396\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\ryoga\.gradle\caches\transforms-3\697acdd64f808b2446bb01cbada78396\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\36278f98581e74dc19c0c6a96cfa2a94\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\ryoga\.gradle\caches\transforms-3\36278f98581e74dc19c0c6a96cfa2a94\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\e61e44f4a4f2071d2b38251654f45057\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\e61e44f4a4f2071d2b38251654f45057\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\da7821f3cfad43deb2023bb91eecbf1a\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\da7821f3cfad43deb2023bb91eecbf1a\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\4513520f6de76869bb8e9cdf6102f360\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\4513520f6de76869bb8e9cdf6102f360\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\619f4b741a6af9b5e17612e246bbfde5\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\619f4b741a6af9b5e17612e246bbfde5\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\f642c6d44a3f30b90c8dbe4f89371ac7\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\ryoga\.gradle\caches\transforms-3\f642c6d44a3f30b90c8dbe4f89371ac7\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\943ae2ceadf2bc96f30c94de4d293216\transformed\tensorflow-lite-2.4.0\AndroidManifest.xml:7:5-8:41
+MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\ryoga\.gradle\caches\transforms-3\943ae2ceadf2bc96f30c94de4d293216\transformed\tensorflow-lite-2.4.0\AndroidManifest.xml:7:5-8:41
+	android:targetSdkVersion
+		INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml
+		MERGED from C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml

@@ -1,0 +1,81 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.takoyaki"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="29"
+9        android:targetSdkVersion="31" />
+10
+11    <uses-feature
+11-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:5:5-7:36
+12        android:name="android.hardware.camera"
+12-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:6:9-47
+13        android:required="false" />
+13-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:7:9-33
+14
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:9:5-65
+15-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:9:22-62
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:10:5-81
+16-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:10:22-78
+17
+18    <application
+18-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:12:5-37:19
+19        android:allowBackup="true"
+19-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:13:9-35
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.5.0] C:\Users\ryoga\.gradle\caches\transforms-3\ea8f24bee6d17f03e5d65e816f8cc591\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:icon="@mipmap/ic_launcher"
+23-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:14:9-43
+24        android:label="@string/app_name"
+24-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:15:9-41
+25        android:roundIcon="@mipmap/ic_launcher_round"
+25-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:16:9-54
+26        android:supportsRtl="true"
+26-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:17:9-35
+27        android:testOnly="true"
+28        android:theme="@style/Theme.Takoyaki" >
+28-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:18:9-46
+29        <activity
+29-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:19:9-21:40
+30            android:name="com.example.takoyaki.ranking"
+30-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:20:13-36
+31            android:exported="false" />
+31-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:21:13-37
+32        <activity
+32-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:22:9-24:40
+33            android:name="com.example.takoyaki.preview"
+33-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:23:13-36
+34            android:exported="false" />
+34-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:24:13-37
+35        <activity
+35-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:25:9-27:40
+36            android:name="com.example.takoyaki.help_view"
+36-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:26:13-38
+37            android:exported="false" />
+37-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:27:13-37
+38        <activity
+38-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:28:9-36:20
+39            android:name="com.example.takoyaki.MainActivity"
+39-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:29:13-41
+40            android:exported="true" >
+40-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:30:13-36
+41            <intent-filter>
+41-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:31:13-35:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:32:17-69
+42-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:32:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:34:17-77
+44-->C:\KC3HACK\2024_I\app\src\main\AndroidManifest.xml:34:27-74
+45            </intent-filter>
+46        </activity>
+47    </application>
+48
+49</manifest>
