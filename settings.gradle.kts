@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Takoyaki"
 include(":app")
+include(":app")
+ 

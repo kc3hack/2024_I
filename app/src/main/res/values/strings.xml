@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Takoyaki</string>
+    <string name="help_view_title">操作説明</string>
+    <string name="help_view_pr1">①完璧なたこ焼きを用意しよう!</string>
+    <string name="help_view_pr2">②たこまる君をタップして写真を撮影しよう！</string>
+    <string name="help_view_pr3">③撮影し、気に入った写真を投稿しよう！より上位を目指してええ感じのたこ焼きを作ろう！</string>
+
+    <string name="preview_point_comment">得点は......</string>
+    <string name="preview_point">１００ "点"</string>
+    <string name="preview_post_no_btn">投稿しない</string>
+    <string name="preview_post_yes_btn">投稿する</string>
+    <string name="takoyaki_comment">ええ感じぽよ～</string>
+
+    <string name="dialog_title">お名前書きなさい。</string>
+    <string name="dialog_message"></string>
+    <string name="dialog_button_ok">OK</string>
+    <string name="dialog_button_cancel">キャンセル</string>
 </resources>

@@ -55,8 +55,29 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+//ryoga
+        //ボタンを押した時
+        findViewById(R.id.helpViewBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //インテントの追加（これが遷移用ロジックです）
+                Intent intent = new Intent(MainActivity.this, help_view.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //インテントの追加（これが遷移用ロジックです）
+                Intent intent = new Intent(MainActivity.this, preview.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
+//ここまで
     public void classifyImage(Bitmap image){
         try {
             ModelUnquant model = ModelUnquant.newInstance(getApplicationContext());
@@ -127,4 +148,6 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+
 }
