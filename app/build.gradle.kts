@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -40,6 +41,7 @@ dependencies {
     implementation ("androidx.constraintlayout:constraintlayout:2.1.1")
     implementation ("org.tensorflow:tensorflow-lite-support:0.1.0")
     implementation ("org.tensorflow:tensorflow-lite-metadata:0.1.0")
+    implementation("com.google.firebase:firebase-database:20.3.0")
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
 
     testImplementation ("junit:junit:4.13.2")
