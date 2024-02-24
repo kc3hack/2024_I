@@ -2,21 +2,28 @@ package com.example.takoyaki;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.Image;
 import android.media.ThumbnailUtils;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.takoyaki.ml.ModelUnquant;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
@@ -26,6 +33,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Random;
 
 public class PreviewActivity extends AppCompatActivity {
     String filePath;
@@ -103,10 +111,41 @@ public class PreviewActivity extends AppCompatActivity {
     private class ButtonClickListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {
-            //ダイアログフラグメントのオブジェクトを生成
-            InputNameDialogFragment dialogFragment = new InputNameDialogFragment();
-            //ダイアログの表示
-            dialogFragment.show(getSupportFragmentManager(), "SampleDialogFragment");
+            EditText editText = new EditText(PreviewActivity.this);
+            AlertDialog.Builder dialogBuilder= new AlertDialog.Builder(PreviewActivity.this);
+            dialogBuilder.setTitle("名前登録")
+                    .setMessage("ランキングに登録しよう！")
+                    .setView(editText)
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener(){
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // OKボタンがクリックされたときの処理
+                                    TextView previewText=findViewById(R.id.previewPoint);
+                                    String scoreString = previewText.getText().toString();
+                                    String replaceString = scoreString.replaceAll("点", "");
+                                    Double score = Double.valueOf(replaceString);
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    DatabaseReference ref = database.getReference("ranking").child(editText.getText().toString());
+                                    ref.setValue(score);
+
+                                    Intent intent = new Intent(PreviewActivity.this, RankingActivity.class);
+                                    startActivity(intent);
+                                }
+                            })
+                    .setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // キャンセルボタンがクリックされたときの処理
+                        }
+                    });
+
+            AlertDialog dialog = dialogBuilder.create(); // AlertDialogのインスタンスを生成
+            dialog.show();
+//            //ダイアログフラグメントのオブジェクトを生成
+//            InputNameDialogFragment dialogFragment = new InputNameDialogFragment();
+//            //ダイアログの表示
+////            dialogFragment.show(getSupportFragmentManager(), "SampleDialogFragment");
+
         }
     }
 
@@ -132,6 +171,8 @@ public class PreviewActivity extends AppCompatActivity {
         return result;
     }
 
+
+
     /**
      * 学習データからテキストに得点を設定するメソッド
      * @param image
@@ -146,7 +187,7 @@ public class PreviewActivity extends AppCompatActivity {
 
             // get 1D array of 224 * 224 pixels in image
             int [] intValues = new int[imageSize * imageSize];
-            image.getPixels(intValues, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
+//            image.getPixels(intValues, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
 
             // iterate over pixels and extract R, G, and B values. Add to bytebuffer.
             int pixel = 0;
