@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".CameraActivity">
 
     <androidx.camera.view.PreviewView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_alignParentEnd="true"
-        android:layout_margin="10sp"
+        android:layout_margin="5dp"
         android:src="@drawable/baseline_flash_on_24"
         app:tint="#fff"
         android:id="@+id/toggleFlash"
@@ -37,7 +37,7 @@
         android:layout_width="40sp"
         android:layout_height="40sp"
         android:layout_below="@id/toggleFlash"
-        android:layout_marginEnd="10sp"
+        android:layout_marginEnd="5dp"
         android:layout_alignParentEnd="true"
         android:id="@+id/flipCamera"
         android:src="@drawable/round_flip_camera_android_24"
@@ -55,5 +55,35 @@
         android:layout_alignParentLeft="true"
         android:onClick="moveRanking"
         tools:ignore="OnClick" />
+
+    <EditText
+        android:id="@+id/x_edit"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"
+        android:digits="123456789"
+        android:text="1"
+        android:maxLength="1"/>
+    <EditText
+        android:id="@+id/y_edit"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/x_edit"
+        android:inputType="number"
+        android:digits="123456789"
+        android:text="1"
+        android:maxLength="1"/>
+    <Button
+        android:id="@+id/syncButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="変更"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/x_edit"
+        android:onClick="sync"
+        tools:ignore="OnClick"/>
 
 </RelativeLayout>

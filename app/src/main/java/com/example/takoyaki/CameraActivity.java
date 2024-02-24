@@ -20,25 +20,45 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.common.util.concurrent.ListenableFuture;
 
+import org.checkerframework.checker.guieffect.qual.UI;
+import org.checkerframework.checker.units.qual.C;
+
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 
 public class CameraActivity extends AppCompatActivity {
     ImageButton capture, toggleFlash, flipCamera;
     Button rankingButton;
+    EditText xEdit, yEdit;
     File file;
     private PreviewView previewView;
     int cameraFacing = CameraSelector.LENS_FACING_BACK;
 
+    int numOfRow;
+    int numOfColumn;
     ProcessCameraProvider cameraProvider;
 
     private final ActivityResultLauncher<String> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), new ActivityResultCallback<Boolean>() {
@@ -50,7 +70,7 @@ public class CameraActivity extends AppCompatActivity {
         }
     });
 
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,25 +81,19 @@ public class CameraActivity extends AppCompatActivity {
         toggleFlash = findViewById(R.id.toggleFlash);
         flipCamera = findViewById(R.id.flipCamera);
         rankingButton = findViewById(R.id.rankingButton);
+        xEdit = findViewById(R.id.x_edit);
+        yEdit = findViewById(R.id.y_edit);
 
+        numOfRow = getIntent().getIntExtra("ROW", 1);
+        numOfColumn = getIntent().getIntExtra("COLUMN", 1);
 
-        if (ContextCompat.checkSelfPermission(CameraActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(CameraActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
+                || ContextCompat.checkSelfPermission(CameraActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+        ) {
             activityResultLauncher.launch(Manifest.permission.CAMERA);
         } else {
             startCamera(cameraFacing);
         }
-
-//        flipCamera.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (cameraFacing == CameraSelector.LENS_FACING_BACK) {
-//                    cameraFacing = CameraSelector.LENS_FACING_FRONT;
-//                } else {
-//                    cameraFacing = CameraSelector.LENS_FACING_BACK;
-//                }
-//                startCamera(cameraFacing);
-//            }
-//        });
     }
 
     public void startCamera(int cameraFacing) {
@@ -112,8 +126,21 @@ public class CameraActivity extends AppCompatActivity {
                         setFlashIcon(camera);
                     }
                 });
-
                 preview.setSurfaceProvider(previewView.getSurfaceProvider());
+                // PreviewView の上に円を描画するための View を作成
+                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+                int cellSize;
+                if (previewView.getWidth() / numOfRow < previewView.getHeight() / numOfColumn) {
+                    cellSize = (previewView.getWidth() - 100) / numOfRow;
+                } else {
+                    cellSize = (previewView.getHeight() - 100) / numOfColumn;
+                }
+                int marginX = (previewView.getWidth() - cellSize * numOfRow) / 2;
+                int marginY = (previewView.getHeight() - cellSize * numOfColumn) / 2;
+                Circle circle = new Circle(this, numOfRow, numOfColumn, marginX, marginY, cellSize);
+
+                addContentView(circle, layoutParams);
+
             } catch (ExecutionException | InterruptedException e) {
                 e.printStackTrace();
             }
@@ -130,11 +157,12 @@ public class CameraActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Toast.makeText(CameraActivity.this, "Image saved at: " + file.getPath(), Toast.LENGTH_SHORT).show();
-
                     }
                 });
                 Intent intent = new Intent(CameraActivity.this, PreviewActivity.class);
                 intent.putExtra("FILE", file.getPath());
+                intent.putExtra("ROW", numOfRow);
+                intent.putExtra("COLUMN", numOfColumn);
                 startActivity(intent);
             }
 
@@ -171,6 +199,7 @@ public class CameraActivity extends AppCompatActivity {
 
     /**
      * アスペクト比の設定
+     *
      * @param width
      * @param height
      * @return
@@ -185,6 +214,7 @@ public class CameraActivity extends AppCompatActivity {
 
     /**
      * カメラの切り替え
+     *
      * @param view
      */
     public void flip(View view) {
@@ -198,10 +228,21 @@ public class CameraActivity extends AppCompatActivity {
 
     /**
      * ランキング画面へ移動
+     *
      * @param view
      */
     public void moveRanking(View view) {
         Intent intent = new Intent(CameraActivity.this, RankingActivity.class);
         startActivity(intent);
+    }
+
+    public void sync(View view) {
+        numOfRow = Integer.parseInt(xEdit.getText().toString());
+        numOfColumn = Integer.parseInt(yEdit.getText().toString());
+        Intent intent = new Intent(this, CameraActivity.class);
+        intent.putExtra("ROW", numOfRow);
+        intent.putExtra("COLUMN", numOfColumn);
+        startActivity(intent);
+        finish();
     }
 }

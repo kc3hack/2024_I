@@ -1,8 +1,8 @@
 package com.example.takoyaki;
 
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
@@ -10,10 +10,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
-import android.media.Image;
 import android.media.ThumbnailUtils;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -33,12 +31,13 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
 import java.util.Objects;
-import java.util.Random;
 
 public class PreviewActivity extends AppCompatActivity {
-    String filePath;
-    ImageView imageView;
-    int imageSize = 224;
+
+    private double averageScore;// 表示される得点
+    private String filePath;// 撮影した写真のパス
+    private ImageView imageView;
+    private int imageSize = 224;// modelで読み込める最大のサイズ
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -69,6 +68,7 @@ public class PreviewActivity extends AppCompatActivity {
         if (filePath != null) {
             System.out.println(filePath);
             Bitmap bitmap = BitmapFactory.decodeFile(filePath);
+
             Matrix matrix = new Matrix();
             matrix.postRotate(90);
             Bitmap flippedBmp = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, false);
@@ -79,32 +79,41 @@ public class PreviewActivity extends AppCompatActivity {
 
             bitmap = Bitmap.createScaledBitmap(bitmap, imageSize, imageSize, false);
 
-            int numOfRow = 4;
-            int numOfClumn = 5;
-            int marginX=50;
-            int cellSize=(flippedBmp.getWidth()-marginX*2)/numOfRow;
-            int marginY=(flippedBmp.getHeight()-cellSize*numOfClumn)/2;
+            int numOfRow = getIntent().getIntExtra("ROW", 1);
+            int numOfColumn = getIntent().getIntExtra("COLUMN", 1);
+            int marginX = flippedBmp.getWidth() / 20;
+            int cellSize = (flippedBmp.getWidth() - marginX * 2) / numOfRow;
+            int marginY = (flippedBmp.getHeight() - cellSize * numOfColumn) / 2;
 
-            ArrayList<Double> cellScores=new ArrayList<>();
-            for (int i = 0; i < numOfClumn; i++) {
+            ArrayList<Double> cellScores = new ArrayList<>();
+            for (int i = 0; i < numOfColumn; i++) {
 
                 for (int j = 0; j < numOfRow; j++) {
-                    Bitmap trimedBitmap = Bitmap.createBitmap(flippedBmp, marginX+cellSize*j, marginY+cellSize*i, cellSize, cellSize);
+                    Bitmap trimedBitmap = Bitmap.createBitmap(flippedBmp, marginX + cellSize * j, marginY + cellSize * i, cellSize, cellSize);
+                    trimedBitmap = Bitmap.createScaledBitmap(trimedBitmap, imageSize, imageSize, false);// bitmapのサイズ変更
                     cellScores.add(classifyImage(trimedBitmap));
+
+                    // 切り取りが成功しているか確認するためのView
+//                    ImageView trimedImageView = findViewById(R.id.trimedImage);
+//                    trimedImageView.setImageBitmap(trimedBitmap);
                 }
             }
-            System.out.println(cellScores);
+            System.out.println(cellScores);// 各セルの得点
 
-//            Bitmap trimedBitmap = Bitmap.createBitmap(flippedBmp, 0, 0, 300, 300);
-//            ImageView trimedImageView = findViewById(R.id.trimedImage);
-//            trimedImageView.setImageBitmap(trimedBitmap);
+            double totalScore = 0;
+            for (double score : cellScores) {
+                totalScore += score;
+            }
+            averageScore = totalScore / cellScores.size();
+            averageScore = ((double) Math.round(averageScore * 100)) / 100;// 小数点第2位以下切り捨て
 
-            TextView previewText=findViewById(R.id.previewPoint);
-            previewText.setText(String.valueOf(classifyImage(bitmap))+"点");
-
+            TextView previewText = findViewById(R.id.previewPoint);
+//            previewText.setText(String.valueOf(classifyImage(bitmap)) + "点");// 画像全体の得点
+            previewText.setText(String.valueOf(averageScore));
         } else {
             System.out.println("NoFile");
         }
+
     }
 
     //ダイアログ
@@ -112,27 +121,27 @@ public class PreviewActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             EditText editText = new EditText(PreviewActivity.this);
-            AlertDialog.Builder dialogBuilder= new AlertDialog.Builder(PreviewActivity.this);
+            AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(PreviewActivity.this);
             dialogBuilder.setTitle("名前登録")
                     .setMessage("ランキングに登録しよう！")
                     .setView(editText)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener(){
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // OKボタンがクリックされたときの処理
-                                    TextView previewText=findViewById(R.id.previewPoint);
-                                    String scoreString = previewText.getText().toString();
-                                    String replaceString = scoreString.replaceAll("点", "");
-                                    Double score = Double.valueOf(replaceString);
-                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
-                                    DatabaseReference ref = database.getReference("ranking").child(editText.getText().toString());
-                                    ref.setValue(score);
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // OKボタンがクリックされたときの処理
+                            TextView previewText = findViewById(R.id.previewPoint);
+                            String scoreString = previewText.getText().toString();
+                            String replaceString = scoreString.replaceAll("点", "");
+                            Double score = Double.valueOf(replaceString);
+                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                            DatabaseReference ref = database.getReference("ranking").child(editText.getText().toString());
+                            ref.setValue(score);
 
-                                    Intent intent = new Intent(PreviewActivity.this, RankingActivity.class);
-                                    startActivity(intent);
-                                }
-                            })
-                    .setNegativeButton("キャンセル", new DialogInterface.OnClickListener(){
+                            Intent intent = new Intent(PreviewActivity.this, RankingActivity.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("キャンセル", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             // キャンセルボタンがクリックされたときの処理
@@ -171,28 +180,27 @@ public class PreviewActivity extends AppCompatActivity {
         return result;
     }
 
-
-
     /**
-     * 学習データからテキストに得点を設定するメソッド
+     * 学習データから点数を返すメソッド
+     *
      * @param image
      */
-    public double classifyImage(Bitmap image){
+    public double classifyImage(Bitmap image) {
         try {
-            ModelUnquant model = ModelUnquant.newInstance(getApplicationContext());
-            // Creates inputs for reference.
+            ModelUnquant model = ModelUnquant.newInstance(getApplicationContext());// モデル生成
+            // bitmapの情報を格納するbuffer.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * imageSize * imageSize * 3);
-            byteBuffer.order(ByteOrder.nativeOrder());
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * imageSize * imageSize * 3);// 各色4byte
+            byteBuffer.order(ByteOrder.nativeOrder());// 実行環境に応じてソート
 
-            // get 1D array of 224 * 224 pixels in image
-            int [] intValues = new int[imageSize * imageSize];
-//            image.getPixels(intValues, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
+            // imageの224*224pixelの情報を格納する配列
+            int[] intValues = new int[imageSize * imageSize];
+            image.getPixels(intValues, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
 
-            // iterate over pixels and extract R, G, and B values. Add to bytebuffer.
+            // bytebufferにRGBの情報を格納
             int pixel = 0;
-            for(int i = 0; i < imageSize; i++){
-                for(int j = 0; j < imageSize; j++){
+            for (int i = 0; i < imageSize; i++) {
+                for (int j = 0; j < imageSize; j++) {
                     int val = intValues[pixel++]; // RGB
                     byteBuffer.putFloat(((val >> 16) & 0xFF) * (1.f / 255.f));
                     byteBuffer.putFloat(((val >> 8) & 0xFF) * (1.f / 255.f));
@@ -206,44 +214,39 @@ public class PreviewActivity extends AppCompatActivity {
             ModelUnquant.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
+
             float[] confidences = outputFeature0.getFloatArray();
-            // find the index of the class with the biggest confidence.
-            int maxPos = 0;
-            float maxConfidence = 0;
-            for(int i = 0; i < confidences.length; i++){
-                if(confidences[i] > maxConfidence){
-                    maxConfidence = confidences[i];
-                    maxPos = i;
-                }
-            }
-            String[] classes = {"生", "半生", "完璧", "半焦げ","焦げ"};
-//            result.setText(classes[maxPos]);
-
-//            String s = "";
-//            for(int i = 0; i < classes.length; i++){
-//                s += String.format("%s: %.1f%%\n", classes[i], confidences[i] * 100);
-//            }
-//            confidence.setText(s);
-
+            String[] classes = {"raw", "hraw", "hburnt", "perfect", "burnt"};
+            /*
+             * 得点の計算
+             * confidenceの値をbuntは0，rawは0.5，hrawとhburntは0.7，perfectは1倍する．
+             * その値の中で最も高い値を100倍した値を点数とする．(満点100)
+             */
             float score;
-            if(confidences[1]*50>=confidences[2]*100){
-                score=confidences[1]*50;
-            }else{
-                score=confidences[2]*100;
+            if (confidences[0] * 50 > confidences[1] * 70) {
+                score = confidences[0] * 50;
+            } else {
+                score = confidences[1] * 70;
             }
-            if(confidences[3]*50>=score){
-                score=confidences[3]*50;
+            if (confidences[2] * 70 > score) {
+                score = confidences[2] * 70;
             }
-            score=(confidences[1] * 70+confidences[2]*100+confidences[3]*70)/3;
+            if (confidences[3] * 100 > score) {
+                score = confidences[3] * 100;
+            }
+            // model実行結果をログに表示
+            for (float confidence : confidences) {
+                System.out.println(confidence);
+            }
+
             double roundedScore;
-            roundedScore=((double)Math.round(score * 100))/100;
+            roundedScore = ((double) Math.round(score * 100)) / 100;
 
             // Releases model resources if no longer used.
             model.close();
             return roundedScore;
         } catch (IOException e) {
-            // TODO Handle the exception
+            return 0;
         }
-        return 0;
     }
 }
