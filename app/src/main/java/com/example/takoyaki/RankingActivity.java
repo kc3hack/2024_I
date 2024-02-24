@@ -1,5 +1,6 @@
 package com.example.takoyaki;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -18,6 +19,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 public class RankingActivity extends AppCompatActivity {
 
@@ -86,5 +88,9 @@ public class RankingActivity extends AppCompatActivity {
 //                Log.e("FirebaseData", "データの取得に失敗しました: " + databaseError.getMessage());
             }
         });
+        //アクションバーのオブジェクトを取得
+        ActionBar actionBar = getSupportActionBar();
+        //アクションバーに「戻るボタン」を追加
+        Objects.requireNonNull(actionBar).setDisplayHomeAsUpEnabled(true);
     }
 }

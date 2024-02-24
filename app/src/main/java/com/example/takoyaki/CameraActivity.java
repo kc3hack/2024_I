@@ -94,6 +94,15 @@ public class CameraActivity extends AppCompatActivity {
         } else {
             startCamera(cameraFacing);
         }
+        //ボタンを押した時
+        findViewById(R.id.helpBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //インテントの追加（これが遷移用ロジックです）
+                Intent intent = new Intent(CameraActivity.this, HelpActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void startCamera(int cameraFacing) {

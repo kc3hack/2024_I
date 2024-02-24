@@ -11,6 +11,20 @@
         android:layout_height="match_parent"
         android:id="@+id/cameraPreview"/>
 
+    <!--helpBtnの作成、ここから-->
+    <ImageButton
+        android:id="@+id/helpBtn"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/help_round_button_icon_icons_com_72706"
+        app:tint="#fff" />
+    <!--ここまで  -->
+
+
     <ImageButton
         android:layout_width="60sp"
         android:layout_height="60sp"
