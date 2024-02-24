@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
-//    public void takePicture(View view){
+    //    public void takePicture(View view){
 //        // Launch camera if we have permission
 //        if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
 //            Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
