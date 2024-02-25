@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.media.Image;
 import android.media.ThumbnailUtils;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -23,13 +24,26 @@ import com.example.takoyaki.ml.ModelUnquant;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.ArrayList;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class PreviewActivity extends AppCompatActivity {
@@ -110,6 +124,23 @@ public class PreviewActivity extends AppCompatActivity {
             TextView previewText = findViewById(R.id.previewPoint);
 //            previewText.setText(String.valueOf(classifyImage(bitmap)) + "点");// 画像全体の得点
             previewText.setText(String.valueOf(averageScore));
+
+            TextView takoyakiText = findViewById(R.id.takoyakiComment);
+            ImageView takoyakiImage = findViewById(R.id.imageView7);
+            if(averageScore >= 90){
+                takoyakiText.setText("最高だぽよ〜");
+                takoyakiImage.setImageResource(R.drawable._00);
+            }else if(averageScore >= 70){
+                takoyakiText.setText("ええ感じぽよ〜");
+                takoyakiImage.setImageResource(R.drawable._00);
+            }else if (averageScore >= 30){
+                takoyakiText.setText("普通だぽよ〜");
+                takoyakiImage.setImageResource(R.drawable.takoyaki);
+            }else{
+                takoyakiText.setText("残念だぽよ〜");
+                takoyakiImage.setImageResource(R.drawable.takoyaki);
+
+            }
         } else {
             System.out.println("NoFile");
         }
@@ -117,7 +148,7 @@ public class PreviewActivity extends AppCompatActivity {
     }
 
     //ダイアログ
-    private class ButtonClickListener implements View.OnClickListener {
+    private class ButtonClickListener implements View.OnClickListener  {
         @Override
         public void onClick(View view) {
             EditText editText = new EditText(PreviewActivity.this);
@@ -133,9 +164,57 @@ public class PreviewActivity extends AppCompatActivity {
                             String scoreString = previewText.getText().toString();
                             String replaceString = scoreString.replaceAll("点", "");
                             Double score = Double.valueOf(replaceString);
+
+//                            String imagePath = filePath;
+//                            String imageUrl = new String("");
+//                            try{
+//                                File file = new File(imagePath);
+//                                byte[] fileContent = new byte[(int) file.length()];
+//                                FileInputStream fis = new FileInputStream(file);
+//                                fis.read(fileContent);
+//                                fis.close();
+//
+//                                String base64Image = Base64.getEncoder().encodeToString(fileContent);
+//                                String apiKey = "e7d8d1e4fa80a70f30ca76b6b8e56ae5";
+//
+//                                URL url = new URL("https://api.imgbb.com/1/upload");
+//                                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//                                connection.setRequestMethod("POST");
+//                                connection.setRequestProperty("Content-Type", "application/json");
+//                                connection.setDoOutput(true);
+//
+//                                JSONObject payload = new JSONObject();
+//                                payload.put("key", apiKey);
+//                                payload.put("image", base64Image);
+//                                DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream());
+//                                outputStream.writeBytes(payload.toString());
+//                                outputStream.flush();
+//                                outputStream.close();
+//
+//                                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+//                                StringBuilder response = new StringBuilder();
+//                                String line;
+//                                while ((line = reader.readLine()) != null) {
+//                                    response.append(line);
+//                                }
+//                                reader.close();
+//
+//                                JSONObject jsonResponse = new JSONObject(response.toString());
+//                                imageUrl = jsonResponse.getJSONObject("data").getString("url");
+//
+//                                connection.disconnect();
+//                            }  catch (FileNotFoundException e) {
+//                                throw new RuntimeException(e);
+//                            } catch (IOException e) {
+//                                throw new RuntimeException(e);
+//                            } catch (JSONException e) {
+//                                throw new RuntimeException(e);
+//                            }
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
-                            DatabaseReference ref = database.getReference("ranking").child(editText.getText().toString());
-                            ref.setValue(score);
+                            DatabaseReference rankingRef = database.getReference("ranking").child(editText.getText().toString());
+//                            DatabaseReference imageRef = database.getReference("image").child(editText.getText().toString());
+                            rankingRef.setValue(score);
+//                            imageRef.setValue(imageUrl);
 
                             Intent intent = new Intent(PreviewActivity.this, RankingActivity.class);
                             startActivity(intent);
@@ -150,14 +229,13 @@ public class PreviewActivity extends AppCompatActivity {
 
             AlertDialog dialog = dialogBuilder.create(); // AlertDialogのインスタンスを生成
             dialog.show();
-//            //ダイアログフラグメントのオブジェクトを生成
-//            InputNameDialogFragment dialogFragment = new InputNameDialogFragment();
-//            //ダイアログの表示
-////            dialogFragment.show(getSupportFragmentManager(), "SampleDialogFragment");
 
         }
     }
+    private String performNetworkRequest(){
 
+        return "a";
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem menuButton) {

@@ -1,6 +1,7 @@
 buildscript {
     dependencies {
         classpath("com.google.gms:google-services:4.4.1")
+        classpath("com.google.code.gson:gson:2.2.4")
     }
 }
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
