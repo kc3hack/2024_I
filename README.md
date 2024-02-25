@@ -1,7 +1,7 @@
 # Takopa(タコパ)
 <!-- プロダクト名に変更してください -->
 
-![Takopa](https://media.discordapp.net/attachments/1179425369691017228/1210921092341047306/Takopa.png?ex=65ec5126&is=65d9dc26&hm=491558a4c501f3fbbcd6303c6d031bc3a67e033713941f734e1b34de90efd402&=&format=webp&quality=lossless&width=589&height=589)
+![Takopa](https://cdn.discordapp.com/attachments/1208279907503833108/1211143574830448680/Takopa.png?ex=65ed205a&is=65daab5a&hm=b1b2a3f3b8ca8efca5a476d3ed97e9283e8fbc805df883dad918e0cce58f3cc4&)
 <!-- プロダクト名・イメージ画像を差し変えてください -->
 
 
