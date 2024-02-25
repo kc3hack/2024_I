@@ -28,6 +28,7 @@ import org.json.JSONObject;
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 
+import java.io.File;
 import java.io.IOException;
 
 import java.nio.ByteBuffer;
@@ -131,6 +132,10 @@ public class PreviewActivity extends AppCompatActivity {
                 takoyakiImage.setImageResource(R.drawable.takoyaki);
 
             }
+
+            //ファイルの消去
+            File file=new File(filePath);
+            file.delete();
         } else {
             System.out.println("NoFile");
         }
