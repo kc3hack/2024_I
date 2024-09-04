@@ -7,7 +7,7 @@
     tools:context=".PreviewActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -18,8 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/image_description" />
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -28,14 +27,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="8dp"
-        android:contentDescription="@string/image_description"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/realtakoyaki"
-        tools:ignore="ImageContrastCheck" />
+        app:srcCompat="@drawable/realtakoyaki" />
 
     <TextView
         android:id="@+id/previewPointComment"
@@ -57,7 +54,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/preview_post_no_btn"
-        android:textColor="#37474F"
         app:layout_constraintEnd_toStartOf="@+id/postYBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewPointComment" />
@@ -69,7 +65,6 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="48dp"
         android:text="@string/preview_post_yes_btn"
-        android:textColor="#37474F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/previewPoint" />
 
@@ -81,8 +76,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/postYBtn"
-        app:srcCompat="@drawable/_00"
-        android:contentDescription="@string/image_description" />
+        app:srcCompat="@drawable/_00" />
 
     <TextView
         android:id="@+id/takoyakiComment"
@@ -105,10 +99,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:text="@string/preview_point"
+        android:text="0点"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/trimedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

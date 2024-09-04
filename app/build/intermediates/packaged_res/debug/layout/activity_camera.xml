@@ -6,115 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".CameraActivity">
 
-    <!-- PreviewView for the camera preview -->
     <androidx.camera.view.PreviewView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/cameraPreview"/>
 
+    <!--helpBtnの作成、ここから-->
     <ImageButton
         android:id="@+id/helpBtn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:onClick="moveToHelp"
         android:background="@null"
-        android:contentDescription="@string/image_description"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/help_round_button_icon_icons_com_72706"
-        app:tint="#fff"
-        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+        app:tint="#fff" />
+    <!--ここまで  -->
+
 
     <ImageButton
-        android:id="@+id/capture"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="40sp"
+        android:id="@+id/capture"
         android:src="@drawable/_00"
         android:scaleType="centerCrop"
         android:background="?attr/selectableItemBackgroundBorderless"
-        app:tint="#fff"
-        android:contentDescription="@string/image_description" />
+        app:tint="#fff" />
 
     <ImageButton
-        android:id="@+id/toggleFlash"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/image_description"
+        android:layout_margin="5dp"
         android:src="@drawable/baseline_flash_on_24"
         app:tint="#fff"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:id="@+id/toggleFlash"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
 
     <ImageButton
-        android:id="@+id/flipCamera"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
         android:layout_below="@id/toggleFlash"
-        android:layout_alignParentEnd="true"
         android:layout_marginEnd="5dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/image_description"
-        android:onClick="flip"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/flipCamera"
         android:src="@drawable/round_flip_camera_android_24"
+        android:background="?attr/selectableItemBackgroundBorderless"
         app:tint="#fff"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:onClick="flip"
+        tools:ignore="OnClick" />
 
     <Button
-        android:id="@+id/rankingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:text="ランキング"
+        android:id="@+id/rankingButton"
         android:layout_alignParentBottom="true"
-        android:onClick="moveToRanking"
-        android:text="@string/ranking_title"
-        android:textColor="#37474F" />
+        android:layout_alignParentLeft="true"
+        android:onClick="moveRanking"
+        tools:ignore="OnClick" />
 
     <EditText
         android:id="@+id/x_edit"
-        android:layout_width="50dp"
+        android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:autofillHints=""
-        android:digits="123456789"
-        android:gravity="center"
         android:inputType="number"
-        android:maxLength="1"
-        android:text="@string/default_column"
-        tools:ignore="DuplicateSpeakableTextCheck,LabelFor" />
-
+        android:digits="123456789"
+        android:text="1"
+        android:maxLength="1"/>
     <EditText
         android:id="@+id/y_edit"
-        android:layout_width="50dp"
+        android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/x_edit"
         android:inputType="number"
         android:digits="123456789"
-        android:gravity="center"
-        android:maxLength="1"
-        android:text="@string/default_row"
-        tools:ignore="LabelFor"
-        android:autofillHints="" />
-
+        android:text="1"
+        android:maxLength="1"/>
     <Button
-        android:id="@+id/sync_button"
+        android:id="@+id/syncButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="変更"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@id/x_edit"
+        android:layout_toRightOf="@id/x_edit"
         android:onClick="sync"
-        android:text="@string/sync_button_text"
-        android:textColor="#37474F"
-        tools:ignore="RelativeOverlap" />
+        tools:ignore="OnClick"/>
 
 </RelativeLayout>

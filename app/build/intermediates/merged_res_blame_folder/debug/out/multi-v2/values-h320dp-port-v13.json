@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.takoyaki.app-mergeDebugResources-41:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "com.example.takoyaki.app-mergeDebugResources-33:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/fuma/.gradle/caches/transforms-3/d0d4f109cfde9ecaa57813f9172fa0e2/transformed/material-1.12.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+                    "source": "/Users/simeiro/.gradle/caches/transforms-3/2f6a7e08bb7346695b9ba06f9750ce93/transformed/material-1.4.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "63",
-                        "endOffsets": "114"
+                        "endColumns": "75",
+                        "endOffsets": "126"
                     }
                 }
             ]

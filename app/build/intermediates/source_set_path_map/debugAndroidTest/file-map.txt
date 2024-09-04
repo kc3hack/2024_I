@@ -1,0 +1,6 @@
+com.example.takoyaki.test.app-core-1.5.0-0 /Users/simeiro/.gradle/caches/transforms-3/7d898f25cac8a6f35dc63afccf782445/transformed/core-1.5.0/res
+com.example.takoyaki.test.app-annotation-experimental-1.3.0-1 /Users/simeiro/.gradle/caches/transforms-3/9d6702ef9cfce45966ed22c56e7823b8/transformed/annotation-experimental-1.3.0/res
+com.example.takoyaki.test.app-androidTest-2 /Users/simeiro/github/2024_I/app/build/generated/res/resValues/androidTest/debug
+com.example.takoyaki.test.app-mergeDebugAndroidTestResources-3 /Users/simeiro/github/2024_I/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.takoyaki.test.app-mergeDebugAndroidTestResources-4 /Users/simeiro/github/2024_I/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.takoyaki.test.app-merged_res-5 /Users/simeiro/github/2024_I/app/build/intermediates/merged_res/debugAndroidTest
