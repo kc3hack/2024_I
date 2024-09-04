@@ -1,130 +1,146 @@
 [
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable__00.png.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/_00.png"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/xml_data_extraction_rules.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/xml/data_extraction_rules.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.takoyaki.app-merged_res-35:/drawable_help_round_button_icon_icons_com_72706.png.flat",
-        "source": "com.example.takoyaki.app-main-37:/drawable/help_round_button_icon_icons_com_72706.png"
+        "merged": "com.example.takoyaki.app-merged_res-43:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/layout_activity_ranking.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/layout/activity_ranking.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable__00.png.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/_00.png"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/layout_activity_camera.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/layout/activity_camera.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_round_flip_camera_android_24.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/round_flip_camera_android_24.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/ic_launcher_background.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.takoyaki.app-merged_res-35:/layout_activity_help_view.xml.flat",
-        "source": "com.example.takoyaki.app-main-37:/layout/activity_help_view.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-anydpi_ic_launcher_round.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-anydpi/ic_launcher_round.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/xml_backup_rules.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/xml/backup_rules.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_takopa.png.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/takopa.png"
     },
     {
-        "merged": "com.example.takoyaki.app-merged_res-35:/layout_activity_camera.xml.flat",
-        "source": "com.example.takoyaki.app-main-37:/layout/activity_camera.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_realtakoyaki.jpeg.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/realtakoyaki.jpeg"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_round_flip_camera_android_24.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/round_flip_camera_android_24.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_background.jpg.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/background.jpg"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.takoyaki.app-merged_res-35:/drawable_takoback.png.flat",
-        "source": "com.example.takoyaki.app-main-37:/drawable/takoback.png"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_background.jpg.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/background.jpg"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_round_camera_24.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/round_camera_24.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/xml_backup_rules.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/xml/backup_rules.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/layout_activity_camera.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/layout/activity_camera.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_takoyaki.png.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/takoyaki.png"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/layout_activity_preview.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/layout/activity_preview.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_round_camera_24.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/round_camera_24.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_baseline_flash_on_24.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/baseline_flash_on_24.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_takoyaki.png.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/takoyaki.png"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-anydpi_ic_launcher.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-anydpi/ic_launcher.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_baseline_flash_off_24.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/baseline_flash_off_24.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_help_round_button_icon_icons_com_72706.png.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/help_round_button_icon_icons_com_72706.png"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/layout_activity_help_view.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/layout/activity_help_view.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/layout_activity_preview.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/layout/activity_preview.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_realtakoyaki.jpeg.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/realtakoyaki.jpeg"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_baseline_flash_off_24.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/baseline_flash_off_24.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/drawable_baseline_flash_on_24.xml.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/drawable/baseline_flash_on_24.xml"
+        "merged": "com.example.takoyaki.app-merged_res-43:/layout_activity_help_view.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/layout/activity_help_view.xml"
     },
     {
-        "merged": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-merged_res-35:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/simeiro/.gradle/daemon/8.0/com.example.takoyaki.app-main-37:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_takoback.png.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/takoback.png"
+    },
+    {
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.takoyaki.app-merged_res-43:/layout_activity_ranking.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/layout/activity_ranking.xml"
+    },
+    {
+        "merged": "com.example.takoyaki.app-merged_res-43:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.takoyaki.app-main-45:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.takoyaki.app-merged_res-43:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.takoyaki.app-main-45:/drawable/ic_launcher_background.xml"
     }
 ]
