@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Takoyaki</string>
+    <string name="image_description">画像</string>
+
+    <string name="default_row">1</string>
+    <string name="default_column">1</string>
+    <string name="sync_button_text">変更</string>
+
+    <string name="help_view_title">操作説明</string>
+    <string name="help_view_pr1">①完璧なたこ焼きを用意しよう!</string>
+    <string name="help_view_pr2">②下の矢印のマークをタップして写真を撮影しよう！</string>
+    <string name="help_view_pr3">③撮影し、気に入った写真を投稿しよう！より上位を目指してええ感じのたこ焼きを作ろう！</string>
+
+    <string name="preview_point_comment">得点は......</string>
+    <string name="preview_point">０</string>
+    <string name="preview_post_no_btn">投稿しない</string>
+    <string name="preview_post_yes_btn">投稿する</string>
+    <string name="takoyaki_comment">ええ感じぽよ～</string>
+
+    <string name="dialog_title">お名前書きなさい。</string>
+    <string name="dialog_message">メッセージ</string>
+    <string name="dialog_button_ok">OK</string>
+    <string name="dialog_button_cancel">キャンセル</string>
+
+    <string name="ranking_title">ランキング</string>
+</resources>

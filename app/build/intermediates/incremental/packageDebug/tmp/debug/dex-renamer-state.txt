@@ -1,9 +1,9 @@
-#Sun Feb 25 11:04:12 JST 2024
-base.0=/Users/simeiro/github/2024_I/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/simeiro/github/2024_I/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/simeiro/github/2024_I/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/Users/simeiro/github/2024_I/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
-base.4=/Users/simeiro/github/2024_I/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+#Wed Sep 04 03:59:29 JST 2024
+base.0=/Users/fuma/GitHub/Takopa/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/fuma/GitHub/Takopa/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/fuma/GitHub/Takopa/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/Users/fuma/GitHub/Takopa/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
+base.4=/Users/fuma/GitHub/Takopa/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex

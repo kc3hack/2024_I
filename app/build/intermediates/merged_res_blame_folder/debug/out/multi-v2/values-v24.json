@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.takoyaki.app-mergeDebugResources-33:/values-v24/values-v24.xml",
+            "outputFile": "com.example.takoyaki.app-mergeDebugResources-41:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/simeiro/.gradle/caches/transforms-3/29d9573fa2bbcf1c66de0f72d2001b2b/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
+                    "source": "/Users/fuma/.gradle/caches/transforms-3/d0d4f109cfde9ecaa57813f9172fa0e2/transformed/material-1.12.0/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,9,12,15",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,140,239,326,427,626,839,1040",
+                        "endLines": "2,3,4,5,8,11,14,17",
+                        "endColumns": "84,98,86,100,10,10,10,10",
+                        "endOffsets": "135,234,321,422,621,834,1035,1250"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,11,14,17",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "347,432,531,618,719,918,1131,1332",
+                        "endLines": "4,5,6,7,10,13,16,19",
+                        "endColumns": "84,98,86,100,10,10,10,10",
+                        "endOffsets": "427,526,613,714,913,1126,1327,1542"
+                    }
+                },
+                {
+                    "source": "/Users/fuma/.gradle/caches/transforms-3/b30c185b9698c27d80fc4049d10fbe57/transformed/appcompat-1.7.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
